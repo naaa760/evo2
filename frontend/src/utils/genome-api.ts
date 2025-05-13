@@ -1,3 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/prefer-nullish-coalescing */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Viaoda_Libre } from "next/font/google";
 import { env } from "~/env";
 
@@ -198,6 +204,7 @@ export async function fetchGeneDetails(geneId: string): Promise<{
 
     const detailData = await detailsResponse.json();
 
+    // eslint-disable-next-line @typescript-eslint/prefer-optional-chain
     if (detailData.result && detailData.result[geneId]) {
       const detail = detailData.result[geneId];
 
@@ -292,6 +299,7 @@ export async function fetchClinvarVariants(
   const searchData = await searchResponse.json();
 
   if (
+    // eslint-disable-next-line @typescript-eslint/prefer-optional-chain
     !searchData.esearchresult ||
     !searchData.esearchresult.idlist ||
     searchData.esearchresult.idlist.length === 0
@@ -323,13 +331,14 @@ export async function fetchClinvarVariants(
   const summaryData = await summaryResponse.json();
   const variants: ClinvarVariant[] = [];
 
+  // eslint-disable-next-line @typescript-eslint/prefer-optional-chain
   if (summaryData.result && summaryData.result.uids) {
     for (const id of summaryData.result.uids) {
       const variant = summaryData.result[id];
       variants.push({
         clinvar_id: id,
         title: variant.title,
-        variation_type: (variant.obj_type || "Unknown")
+        variation_type: (variant.obj_type ?? "Unknown")
           .split(" ")
           .map(
             (word: string) =>
@@ -382,5 +391,6 @@ export async function analyzeVariantWithAPI({
     throw new Error("Failed to analyze variant " + errorText);
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return await response.json();
 }

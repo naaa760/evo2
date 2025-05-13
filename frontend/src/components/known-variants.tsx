@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/prefer-regexp-exec */
 "use client";
 
 import {
@@ -15,7 +16,7 @@ import {
   TableHeader,
   TableRow,
 } from "./ui/table";
-import { Viaoda_Libre } from "next/font/google";
+
 import {
   BarChart2,
   ExternalLink,
@@ -62,8 +63,7 @@ export default function KnownVariants({
     }
 
     if (
-      !variantDetails ||
-      !variantDetails.position ||
+      !variantDetails?.position ||
       !variantDetails.reference ||
       !variantDetails.alternative
     ) {

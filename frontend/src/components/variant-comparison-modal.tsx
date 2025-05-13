@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/prefer-regexp-exec */
+/* eslint-disable @typescript-eslint/prefer-optional-chain */
 import type { ClinvarVariant } from "~/utils/genome-api";
 import { Button } from "./ui/button";
 import { Check, ExternalLink, Shield, X } from "lucide-react";

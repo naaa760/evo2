@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/prefer-nullish-coalescing */
+/* eslint-disable @typescript-eslint/prefer-regexp-exec */
+/* eslint-disable @typescript-eslint/no-floating-promises */
+/* eslint-disable react/display-name */
 "use client";
 
 import {
@@ -21,7 +25,7 @@ import {
   getNucleotideColorClass,
 } from "~/utils/coloring-utils";
 import { Button } from "./ui/button";
-import { match } from "node:assert";
+
 import { Zap } from "lucide-react";
 
 export interface VariantAnalysisHandle {

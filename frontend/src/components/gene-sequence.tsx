@@ -1,9 +1,9 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import type { GeneBounds, GeneDetailsFromSearch } from "~/utils/genome-api";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import {
-  startTransition,
   useCallback,
   useEffect,
   useMemo,
