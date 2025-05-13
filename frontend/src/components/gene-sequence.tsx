@@ -227,7 +227,7 @@ export function GeneSequence({
       const colorizedChars: JSX.Element[] = [];
 
       for (let j = 0; j < chunk.length; j++) {
-        const nucleotide = chunk[j] || "";
+        const nucleotide = chunk[j] ?? "";
         const nucleotidePosition = lineStartPos + j;
         const color = getNucleotideColorClass(nucleotide);
         colorizedChars.push(
