@@ -117,38 +117,6 @@ export default async function LandingPage() {
             )}
           </div>
         </div>
-
-        <div className="mt-24 grid gap-8 md:grid-cols-3">
-          <div className="rounded-xl bg-gradient-to-br from-white/60 to-amber-50/60 p-8 shadow-lg backdrop-blur-sm transition-all hover:from-white/70 hover:to-amber-50/70">
-            <h3 className="mb-3 text-xl font-semibold text-amber-950">
-              Browse Genomes
-            </h3>
-            <p className="text-amber-900/70">
-              Select from various genome assemblies and browse their chromosomes
-              to find genes of interest.
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-gradient-to-br from-white/60 to-amber-50/60 p-8 shadow-lg backdrop-blur-sm transition-all hover:from-white/70 hover:to-amber-50/70">
-            <h3 className="mb-3 text-xl font-semibold text-amber-950">
-              Predict Variants
-            </h3>
-            <p className="text-amber-900/70">
-              Use the EVO2 large language model to predict the pathogenicity of
-              single nucleotide variants.
-            </p>
-          </div>
-
-          <div className="rounded-xl bg-gradient-to-br from-white/60 to-amber-50/60 p-8 shadow-lg backdrop-blur-sm transition-all hover:from-white/70 hover:to-amber-50/70">
-            <h3 className="mb-3 text-xl font-semibold text-amber-950">
-              Compare with ClinVar
-            </h3>
-            <p className="text-amber-900/70">
-              Compare AI predictions against existing ClinVar classifications
-              for known variants.
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );
