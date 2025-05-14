@@ -152,19 +152,28 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#e9eeea]">
-      <header className="border-b border-[#3c4f3d]/10 bg-white">
+    <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-yellow-100 via-orange-100 to-amber-200">
+      {/* Background gradient overlays */}
+      <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/30 via-red-50/20 to-amber-100/10"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_100%_200px,rgba(255,166,0,0.05),transparent)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_0%_300px,rgba(205,133,63,0.08),transparent)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_900px_at_50%_-100px,rgba(255,140,0,0.05),transparent)]"></div>
+
+      {/* Header */}
+      <header className="relative border-b border-amber-800/10 bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="relative">
-                <h1 className="text-xl font-light tracking-wide text-[#3c4f3d]">
+                <h1 className="text-xl font-light tracking-wide text-amber-900">
                   <span className="font-normal">EVO</span>
-                  <span className="text-[#87fb5a]">2</span>
+                  <span className="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">
+                    2
+                  </span>
                 </h1>
-                <div className="absolute -bottom-1 left-0 h-[2px] w-12 text-[#87fb5a]"></div>
+                <div className="absolute -bottom-1 left-0 h-[2px] w-12 bg-gradient-to-r from-amber-500 to-orange-500"></div>
               </div>
-              <span className="text-sm font-light text-[#3c4f3d]/70">
+              <span className="text-sm font-light text-amber-900/70">
                 Variant Analysis
               </span>
             </div>
@@ -173,7 +182,7 @@ export default function HomePage() {
               <Link href="/">
                 <Button
                   variant="outline"
-                  className="border-[#3c4f3d]/20 text-[#3c4f3d] hover:bg-[#3c4f3d]/10"
+                  className="border-amber-600/20 text-amber-900 transition-all hover:bg-amber-500/10"
                 >
                   Back to Home
                 </Button>
@@ -184,7 +193,7 @@ export default function HomePage() {
         </div>
       </header>
 
-      <main className="container mx-auto px-6 py-6">
+      <main className="relative container mx-auto px-6 py-6">
         {selectedGene ? (
           <GeneViewer
             gene={selectedGene}
@@ -193,13 +202,13 @@ export default function HomePage() {
           />
         ) : (
           <>
-            <Card className="mb-6 gap-0 border-none bg-white py-0 shadow-sm">
+            <Card className="mb-6 border-none bg-white/80 py-0 shadow-sm backdrop-blur-sm">
               <CardHeader className="pt-4 pb-2">
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-sm font-normal text-[#3c4f3d]/70">
+                  <CardTitle className="text-sm font-normal text-amber-900/70">
                     Genome Assembly
                   </CardTitle>
-                  <div className="text-xs text-[#3c4f3d]/60">
+                  <div className="text-xs text-amber-900/60">
                     Organism: <span className="font-medium">Human</span>
                   </div>
                 </div>
@@ -210,7 +219,7 @@ export default function HomePage() {
                   onValueChange={handleGenomeChange}
                   disabled={isLoading}
                 >
-                  <SelectTrigger className="h-9 w-full border-[#3c4f3d]/10">
+                  <SelectTrigger className="h-9 w-full border-amber-600/20">
                     <SelectValue placeholder="Select genome assembly" />
                   </SelectTrigger>
                   <SelectContent>
@@ -223,7 +232,7 @@ export default function HomePage() {
                   </SelectContent>
                 </Select>
                 {selectedGenome && (
-                  <p className="mt-2 text-xs text-[#3c4f3d]/60">
+                  <p className="mt-2 text-xs text-amber-900/60">
                     {
                       genomes.find((genome) => genome.id === selectedGenome)
                         ?.sourceName
@@ -235,7 +244,7 @@ export default function HomePage() {
 
             <Card className="mt-6 gap-0 border-none bg-white py-0 shadow-sm">
               <CardHeader className="pt-4 pb-2">
-                <CardTitle className="text-sm font-normal text-[#3c4f3d]/70">
+                <CardTitle className="text-sm font-normal text-amber-900/70">
                   Browse
                 </CardTitle>
               </CardHeader>
@@ -244,15 +253,15 @@ export default function HomePage() {
                   value={mode}
                   onValueChange={(value) => switchMode(value as Mode)}
                 >
-                  <TabsList className="mb-4 bg-[#e9eeea]">
+                  <TabsList className="mb-4 bg-amber-50">
                     <TabsTrigger
-                      className="data-[state=active]:bg-white data-[state=active]:text-[#3c4f3d]"
+                      className="data-[state=active]:bg-white data-[state=active]:text-amber-900"
                       value="search"
                     >
                       Search Genes
                     </TabsTrigger>
                     <TabsTrigger
-                      className="data-[state=active]:bg-white data-[state=active]:text-[#3c4f3d]"
+                      className="data-[state=active]:bg-white data-[state=active]:text-amber-900"
                       value="browse"
                     >
                       Browse Chromosomes
@@ -271,11 +280,11 @@ export default function HomePage() {
                             placeholder="Enter gene symbol or name"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="h-9 border-[#3c4f3d]/10 pr-10"
+                            className="h-9 border-amber-600/20 pr-10"
                           />
                           <Button
                             type="submit"
-                            className="absolute top-0 right-0 h-full cursor-pointer rounded-l-none bg-[#3c4f3d] text-white hover:bg-[#3c4f3d]/90"
+                            className="absolute top-0 right-0 h-full cursor-pointer rounded-l-none bg-amber-900 text-white hover:bg-amber-800"
                             size="icon"
                             disabled={isLoading || !searchQuery.trim()}
                           >
@@ -286,7 +295,7 @@ export default function HomePage() {
                       </form>
                       <Button
                         variant="link"
-                        className="h-auto cursor-pointer p-0 text-[#de8246] hover:text-[#de8246]/80"
+                        className="h-auto cursor-pointer p-0 text-amber-600 hover:text-amber-500"
                         onClick={loadBRCA1Example}
                       >
                         Try BRCA1 example
@@ -302,7 +311,7 @@ export default function HomePage() {
                             key={chrom.name}
                             variant="outline"
                             size="sm"
-                            className={`h-8 cursor-pointer border-[#3c4f3d]/10 hover:bg-[#e9eeea] hover:text-[#3c4f3d] ${selectedChromosome === chrom.name ? "text[#3c4f3d] bg-[#e9eeea]" : ""}`}
+                            className={`h-8 cursor-pointer border-amber-600/20 hover:bg-amber-50 hover:text-amber-900 ${selectedChromosome === chrom.name ? "bg-amber-50 text-amber-900" : ""}`}
                             onClick={() => setSelectedChromosome(chrom.name)}
                           >
                             {chrom.name}
@@ -314,32 +323,32 @@ export default function HomePage() {
                 </Tabs>
 
                 {isLoading && (
-                  <div className="flex justify-center py-4">
-                    <div className="h-6 w-6 animate-spin rounded-full border-2 border-[#3c4f3d]/30 border-t-[#de8243]"></div>
+                  <div className="flex h-48 items-center justify-center">
+                    <div className="h-8 w-8 animate-spin rounded-full border-4 border-amber-600/20 border-t-amber-600"></div>
                   </div>
                 )}
 
                 {error && (
-                  <div className="mt-4 rounded-md border border-red-200 bg-red-50 p-3 text-sm text-red-700">
-                    {error}
+                  <div className="mb-6 rounded-lg bg-red-50/80 p-4 backdrop-blur-sm">
+                    <p className="text-sm text-red-600">{error}</p>
                   </div>
                 )}
 
                 {searchResults.length > 0 && !isLoading && (
                   <div className="mt-6">
                     <div className="mb-2">
-                      <h4 className="text-xs font-normal text-[#3c4f3d]/70">
+                      <h4 className="text-xs font-normal text-amber-900/70">
                         {mode === "search" ? (
                           <>
                             Search Results:{" "}
-                            <span className="font-medium text-[#3c4f3d]">
+                            <span className="font-medium text-amber-900">
                               {searchResults.length} genes
                             </span>
                           </>
                         ) : (
                           <>
                             Genes on {selectedChromosome}:{" "}
-                            <span className="font-medium text-[#3c4f3d]">
+                            <span className="font-medium text-amber-900">
                               {searchResults.length} found
                             </span>
                           </>
@@ -347,17 +356,17 @@ export default function HomePage() {
                       </h4>
                     </div>
 
-                    <div className="overflow-hidden rounded-md border border-[#3c4f3d]/5">
+                    <div className="overflow-hidden rounded-md border border-amber-600/5">
                       <Table>
                         <TableHeader>
-                          <TableRow className="bg-[#e9eeea]/50 hover:bg-[e9eeea]/70">
-                            <TableHead className="text-xs font-normal text-[#3c4f3d]/70">
+                          <TableRow className="bg-amber-50 hover:bg-amber-100">
+                            <TableHead className="text-xs font-normal text-amber-900/70">
                               Symbol
                             </TableHead>
-                            <TableHead className="text-xs font-normal text-[#3c4f3d]/70">
+                            <TableHead className="text-xs font-normal text-amber-900/70">
                               Name
                             </TableHead>
-                            <TableHead className="text-xs font-normal text-[#3c4f3d]/70">
+                            <TableHead className="text-xs font-normal text-amber-900/70">
                               Location
                             </TableHead>
                           </TableRow>
@@ -366,16 +375,16 @@ export default function HomePage() {
                           {searchResults.map((gene, index) => (
                             <TableRow
                               key={`${gene.symbol}-${index}`}
-                              className="cursor-pointer border-b border-[#3c4f3d]/5 hover:bg-[#e9eeea]/50"
+                              className="cursor-pointer border-b border-amber-600/5 hover:bg-amber-100"
                               onClick={() => setSelectedGene(gene)}
                             >
-                              <TableCell className="py-2 font-medium text-[#3c4f3d]">
+                              <TableCell className="py-2 font-medium text-amber-900">
                                 {gene.symbol}
                               </TableCell>
-                              <TableCell className="py-2 font-medium text-[#3c4f3d]">
+                              <TableCell className="py-2 font-medium text-amber-900">
                                 {gene.name}
                               </TableCell>
-                              <TableCell className="py-2 font-medium text-[#3c4f3d]">
+                              <TableCell className="py-2 font-medium text-amber-900">
                                 {gene.chrom}
                               </TableCell>
                             </TableRow>
@@ -387,8 +396,8 @@ export default function HomePage() {
                 )}
 
                 {!isLoading && !error && searchResults.length === 0 && (
-                  <div className="flex h-48 flex-col items-center justify-center text-center text-gray-400">
-                    <Search className="mb-4 h-10 w-10 text-gray-400" />
+                  <div className="flex h-48 flex-col items-center justify-center text-center text-amber-400">
+                    <Search className="mb-4 h-10 w-10 text-amber-400" />
                     <p className="text-sm leading-relaxed">
                       {mode === "search"
                         ? "Enter a gene or symbol and click search"
