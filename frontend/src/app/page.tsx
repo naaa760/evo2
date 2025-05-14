@@ -9,12 +9,17 @@ export default async function LandingPage() {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-yellow-200 via-orange-300 to-amber-400">
-      {/* Rich gradient overlays for particle effects */}
+      {/* Enhanced gradient overlays with more brown */}
       <div className="absolute inset-0 bg-gradient-to-br from-yellow-100/30 via-red-100/20 to-amber-800/10"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_100%_200px,rgba(255,166,0,0.1),transparent)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_0%_300px,rgba(205,133,63,0.15),transparent)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_900px_at_50%_-100px,rgba(255,140,0,0.1),transparent)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_400px_at_80%_80%,rgba(180,83,9,0.07),transparent)]"></div>
+
+      {/* Added brown overlay */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_700px_at_30%_70%,rgba(139,69,19,0.1),transparent)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_70%_30%,rgba(101,67,33,0.08),transparent)]"></div>
+      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-amber-800/10 to-transparent"></div>
 
       {/* Background Images with higher opacity to be clearly visible */}
       <div className="absolute top-0 right-0 -z-10 opacity-60">
