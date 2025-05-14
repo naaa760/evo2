@@ -47,7 +47,7 @@ export default async function LandingPage() {
         <div className="flex items-center justify-between">
           <div className="relative">
             <h1 className="text-2xl font-light tracking-wide text-amber-950">
-              <span className="font-semibold">EVO</span>
+              <span className="font-semibold">EVo</span>
               <span className="bg-gradient-to-r from-amber-600 via-yellow-500 to-orange-500 bg-clip-text text-transparent">
                 2
               </span>
@@ -84,7 +84,7 @@ export default async function LandingPage() {
         <div className="relative mt-24 flex flex-col items-center text-center">
           <h1 className="fs-64 font-title text-6xl font-black tracking-tight">
             <span className="bg-gradient-to-r from-amber-950 via-yellow-600 to-amber-950 bg-clip-text text-transparent">
-              EVO
+              EVo
             </span>
             <span className="bg-gradient-to-r from-amber-500 via-yellow-400 to-orange-500 bg-clip-text text-transparent">
               2
@@ -96,8 +96,9 @@ export default async function LandingPage() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg font-medium text-amber-950/80">
-            A powerful platform for predicting the pathogenicity of single
-            nucleotide variants using state-of-the-art AI modeling.
+            An advanced AI-driven platform that helps identify whether tiny
+            changes in DNA, known as single nucleotide variants, are likely to
+            cause diseases or health issues
           </p>
 
           <div className="mt-12">
