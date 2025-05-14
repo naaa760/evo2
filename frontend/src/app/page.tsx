@@ -1,43 +1,69 @@
 import Link from "next/link";
 import { Button } from "~/components/ui/button";
 import { auth } from "@clerk/nextjs/server";
+import Image from "next/image";
 
 export default async function LandingPage() {
   // Check if user is authenticated
   const { userId } = await auth();
 
   return (
-    <div className="min-h-screen bg-[#e9eeea]">
-      <div className="container mx-auto px-6 py-12">
+    <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-200 via-orange-200 to-yellow-100">
+      {/* Background overlay gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-amber-100/50 via-orange-100/50 to-yellow-50/50"></div>
+
+      {/* Background Images with adjusted opacity */}
+      <div className="absolute top-0 right-0 -z-10 opacity-25">
+        <Image
+          src="/images/dn.png"
+          alt="DNA Structure"
+          width={600}
+          height={600}
+          className="object-contain"
+          priority
+        />
+      </div>
+      <div className="absolute bottom-0 left-0 -z-10 opacity-25">
+        <Image
+          src="/images/dn1.png"
+          alt="DNA Helix"
+          width={500}
+          height={500}
+          className="object-contain"
+          priority
+        />
+      </div>
+
+      <div className="relative container mx-auto px-6 py-12">
         <div className="flex items-center justify-between">
           <div className="relative">
-            <h1 className="text-xl font-light tracking-wide text-[#3c4f3d]">
-              <span className="font-normal">EVO</span>
-              <span className="text-[#de8246]">2</span>
+            <h1 className="text-2xl font-light tracking-wide text-amber-950">
+              <span className="font-semibold">EVO</span>
+              <span className="bg-gradient-to-r from-amber-600 via-yellow-500 to-orange-500 bg-clip-text text-transparent">
+                2
+              </span>
             </h1>
-            <div className="absolute -bottom-1 left-0 h-[2px] w-12 bg-[#de8246]"></div>
+            <div className="absolute -bottom-1 left-0 h-[3px] w-16 bg-gradient-to-r from-amber-500 via-yellow-500 to-orange-400"></div>
           </div>
           <div className="flex gap-4">
             {userId ? (
-              <>
-                <Link href="/main">
-                  <Button className="bg-[#3c4f3d] text-white hover:bg-[#3c4f3d]/90">
-                    Go to Application
-                  </Button>
-                </Link>
-              </>
+              <Link href="/main">
+                <Button className="bg-gradient-to-r from-amber-600 to-orange-500 text-white transition-all hover:from-amber-700 hover:to-orange-600">
+                  Go to Application
+                </Button>
+              </Link>
             ) : (
               <>
                 <Link href="/sign-in">
                   <Button
                     variant="outline"
-                    className="border-[#3c4f3d]/20 text-[#3c4f3d] hover:bg-[#3c4f3d]/10"
+                    className="border-amber-600/20 text-amber-900 transition-all hover:bg-amber-500/10"
                   >
                     Sign In
                   </Button>
                 </Link>
                 <Link href="/sign-up">
-                  <Button className="bg-[#3c4f3d] text-white hover:bg-[#3c4f3d]/90">
+                  <Button className="bg-gradient-to-r from-amber-600 to-orange-500 text-white transition-all hover:from-amber-700 hover:to-orange-600">
                     Sign Up
                   </Button>
                 </Link>
@@ -46,14 +72,21 @@ export default async function LandingPage() {
           </div>
         </div>
 
-        <div className="mt-24 flex flex-col items-center text-center">
-          <h1 className="text-5xl font-light tracking-wide text-[#3c4f3d]">
-            <span className="font-normal">EVO</span>
-            <span className="text-[#de8246]">2</span>
-            <span className="font-normal"> Variant Analysis</span>
+        <div className="relative mt-24 flex flex-col items-center text-center">
+          <h1 className="fs-64 font-title text-6xl font-black tracking-tight">
+            <span className="bg-gradient-to-r from-amber-950 via-yellow-600 to-amber-950 bg-clip-text text-transparent">
+              EVO
+            </span>
+            <span className="bg-gradient-to-r from-amber-500 via-yellow-400 to-orange-500 bg-clip-text text-transparent">
+              2
+            </span>
+            <span className="bg-gradient-to-r from-amber-950 via-yellow-600 to-amber-950 bg-clip-text text-transparent">
+              {" "}
+              Variant Analysis
+            </span>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg text-[#3c4f3d]/80">
+          <p className="mt-8 max-w-2xl text-lg font-medium text-amber-950/80">
             A powerful platform for predicting the pathogenicity of single
             nucleotide variants using state-of-the-art AI modeling.
           </p>
@@ -63,7 +96,7 @@ export default async function LandingPage() {
               <Link href="/main">
                 <Button
                   size="lg"
-                  className="bg-[#3c4f3d] text-white hover:bg-[#3c4f3d]/90"
+                  className="bg-gradient-to-r from-amber-600 to-orange-500 text-white transition-all hover:from-amber-700 hover:to-orange-600"
                 >
                   Launch Application
                 </Button>
@@ -72,7 +105,7 @@ export default async function LandingPage() {
               <Link href="/sign-in">
                 <Button
                   size="lg"
-                  className="bg-[#3c4f3d] text-white hover:bg-[#3c4f3d]/90"
+                  className="bg-gradient-to-r from-amber-600 to-orange-500 text-white transition-all hover:from-amber-700 hover:to-orange-600"
                 >
                   Get Started
                 </Button>
@@ -82,31 +115,31 @@ export default async function LandingPage() {
         </div>
 
         <div className="mt-24 grid gap-8 md:grid-cols-3">
-          <div className="rounded-lg bg-white p-6 shadow-sm">
-            <h3 className="mb-3 text-xl font-medium text-[#3c4f3d]">
+          <div className="rounded-xl bg-gradient-to-br from-white/60 to-amber-50/60 p-8 shadow-lg backdrop-blur-sm transition-all hover:from-white/70 hover:to-amber-50/70">
+            <h3 className="mb-3 text-xl font-semibold text-amber-950">
               Browse Genomes
             </h3>
-            <p className="text-[#3c4f3d]/70">
+            <p className="text-amber-900/70">
               Select from various genome assemblies and browse their chromosomes
               to find genes of interest.
             </p>
           </div>
 
-          <div className="rounded-lg bg-white p-6 shadow-sm">
-            <h3 className="mb-3 text-xl font-medium text-[#3c4f3d]">
+          <div className="rounded-xl bg-gradient-to-br from-white/60 to-amber-50/60 p-8 shadow-lg backdrop-blur-sm transition-all hover:from-white/70 hover:to-amber-50/70">
+            <h3 className="mb-3 text-xl font-semibold text-amber-950">
               Predict Variants
             </h3>
-            <p className="text-[#3c4f3d]/70">
+            <p className="text-amber-900/70">
               Use the EVO2 large language model to predict the pathogenicity of
               single nucleotide variants.
             </p>
           </div>
 
-          <div className="rounded-lg bg-white p-6 shadow-sm">
-            <h3 className="mb-3 text-xl font-medium text-[#3c4f3d]">
+          <div className="rounded-xl bg-gradient-to-br from-white/60 to-amber-50/60 p-8 shadow-lg backdrop-blur-sm transition-all hover:from-white/70 hover:to-amber-50/70">
+            <h3 className="mb-3 text-xl font-semibold text-amber-950">
               Compare with ClinVar
             </h3>
-            <p className="text-[#3c4f3d]/70">
+            <p className="text-amber-900/70">
               Compare AI predictions against existing ClinVar classifications
               for known variants.
             </p>
