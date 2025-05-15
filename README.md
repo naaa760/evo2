@@ -35,3 +35,13 @@ EVO2 is an advanced AI-powered platform for predicting the pathogenicity of sing
 - Modal (for AI deployment)
 - UCSC Genome Browser API
 - NCBI APIs (for gene and variant data)
+
+
+## How to Use
+Sign in to your account or create a new one
+Select a genome assembly from the dropdown menu
+Search for a gene by name or symbol, or browse chromosomes
+Select a gene to view its DNA sequence
+5. Click on a position in the sequence to analyze a variant
+Enter an alternative nucleotide to get an AI prediction of its pathogenicity
+View known variants from ClinVar for comparison
