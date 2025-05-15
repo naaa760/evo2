@@ -13,3 +13,6 @@ EVO2 is an advanced AI-powered platform for predicting the pathogenicity of sing
 
 - Variant Analysis: AI-powered prediction of variant pathogenicity
 
+- ClinVar Integration: Compare variants against the ClinVar database of known variants
+
+- Secure Authentication: Protected access with user authentication
