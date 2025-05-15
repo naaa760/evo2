@@ -29,8 +29,9 @@ EVO2 is an advanced AI-powered platform for predicting the pathogenicity of sing
 - Clerk Authentication
 
 ## Backend
-FastAPI
-Python
-Modal (for AI deployment)
-UCSC Genome Browser API
-NCBI APIs (for gene and variant data)
+
+- FastAPI
+- Python
+- Modal (for AI deployment)
+- UCSC Genome Browser API
+- NCBI APIs (for gene and variant data)
