@@ -19,3 +19,10 @@ EVO2 is an advanced AI-powered platform for predicting the pathogenicity of sing
 
 
 ## Technologies
+
+## Frontend
+- Next.js
+- React
+- TypeScript
+- TailwindCSS
+- Clerk Authentication
