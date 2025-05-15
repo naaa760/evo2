@@ -6,3 +6,6 @@
 EVO2 is an advanced AI-powered platform for predicting the pathogenicity of single nucleotide variants in DNA. It helps researchers and healthcare professionals determine whether tiny changes in a person's genetic code are likely to cause diseases.
 
 ## Features
+
+> Genome Browser: Search and navigate human genome assemblies and chromosomes
+> Gene Explorer: Examine DNA sequences of specific genes of interest
