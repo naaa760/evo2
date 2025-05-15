@@ -1,1 +1,1 @@
-## evo2
+## EVO2: DNA Variant Analysis Platform
