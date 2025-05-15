@@ -5,8 +5,19 @@
 
 https://evo2-sage.vercel.app/
 
-
+‼️Notice:
+I have created a demo video for this project because it uses Modal AI, which offers only a 2-day free tier. Since the free access expires quickly, I recorded the video to show how the project works. You can still run the project locally on your machine by following the provided instructions.
 EVO2 is an advanced AI-powered platform for predicting the pathogenicity of single nucleotide variants in DNA. It helps researchers and healthcare professionals determine whether tiny changes in a person's genetic code are likely to cause diseases.
+
+just add this env in the frontend file 
+
+NEXT_PUBLIC_ANALYZE_SINGLE_VARIANT_BASE_URL=""
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=""
+CLERK_SECRET_KEY=""
+
+MODAL_TOKEN_ID = ""
+MODAL_TOKEN_SECRET = ""
 
 ## Features
 
