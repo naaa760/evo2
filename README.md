@@ -7,5 +7,9 @@ EVO2 is an advanced AI-powered platform for predicting the pathogenicity of sing
 
 ## Features
 
-> Genome Browser: Search and navigate human genome assemblies and chromosomes
-> Gene Explorer: Examine DNA sequences of specific genes of interest
+- Genome Browser: Search and navigate human genome assemblies and chromosomes
+  
+- Gene Explorer: Examine DNA sequences of specific genes of interest
+
+- Variant Analysis: AI-powered prediction of variant pathogenicity
+
