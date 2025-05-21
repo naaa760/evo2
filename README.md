@@ -1,5 +1,12 @@
 ## EVO2: DNA Variant Analysis Platform
 
+<br/>
+
+EVO2 is a sleek, intuitive web app that turns tiny DNA tweaks into powerful insights. Just search your gene, let our AI predict if a variant is harmful or harmless, and instantly see how it compares to real-world cases. In minutes, EVO2 makes the mysteries of your genome crystal clear—so researchers and clinicians can focus on what matters most: better health.
+
+<br/>
+<br/>
+
 ![image](https://github.com/user-attachments/assets/fe24ac57-e588-408e-9edd-ba2eba9a0a80)
 
 
