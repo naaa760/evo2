@@ -9,6 +9,10 @@ EVO2 is a sleek, intuitive web app that turns tiny DNA tweaks into powerful insi
 
 ![image](https://github.com/user-attachments/assets/fe24ac57-e588-408e-9edd-ba2eba9a0a80)
 
+![image](https://github.com/user-attachments/assets/10a534dc-5279-4b84-9cab-c88e32a4f4a6)
+
+![image](https://github.com/user-attachments/assets/2b42f940-3399-4780-a54e-abeee24675ca)
+
 
 https://evo2-sage.vercel.app/
 
