@@ -1,4 +1,4 @@
-## EVO2: DNA Variant Analysis Platform
+## 🧬 EVO2: DNA Variant Analysis Platform
 
 <br/>
 
@@ -16,7 +16,8 @@ EVO2 is a sleek, intuitive web app that turns tiny DNA tweaks into powerful insi
 
 https://evo2-sage.vercel.app/
 
-‼️Notice:
+‼️Notice:  https://drive.google.com/file/d/1R7eAZUVClgFQsG_9JoDlVecanAU14S9c/view
+
 
 - I have created a demo video for this project because it uses Modal AI, which offers only a 30-day free tier. Since the free access expires quickly because of calling the API to fetch the data, I recorded the video to show how the project works. You can still run the project locally on your machine by following the provided instructions.
 EVO2 is an advanced AI-powered platform for predicting the pathogenicity of single nucleotide variants in DNA. It helps researchers and healthcare professionals determine whether tiny changes in a person's genetic code are likely to cause diseases.
