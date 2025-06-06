@@ -27,37 +27,49 @@ export default async function LandingPage() {
       <div className="absolute inset-0 -z-5">
         {/* Top-left grid pattern */}
         <div
-          className="absolute top-0 left-0 h-1/3 w-1/2 opacity-5"
+          className="absolute top-0 left-0 h-1/2 w-1/2 opacity-15"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+              linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)
             `,
-            backgroundSize: "20px 20px",
+            backgroundSize: "30px 30px",
           }}
         ></div>
 
         {/* Bottom-right grid pattern */}
         <div
-          className="absolute right-0 bottom-0 h-1/2 w-1/3 opacity-4"
+          className="absolute right-0 bottom-0 h-2/3 w-1/2 opacity-12"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)
+              linear-gradient(rgba(255,255,255,0.25) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.25) 1px, transparent 1px)
+            `,
+            backgroundSize: "40px 40px",
+          }}
+        ></div>
+
+        {/* Center area grid pattern */}
+        <div
+          className="absolute top-1/4 left-1/4 h-1/2 w-1/2 rotate-12 opacity-8"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)
             `,
             backgroundSize: "25px 25px",
           }}
         ></div>
 
-        {/* Center diagonal grid pattern */}
+        {/* Additional subtle grid for more coverage */}
         <div
-          className="absolute top-1/3 left-1/3 h-1/3 w-1/3 rotate-12 opacity-3"
+          className="absolute top-1/3 right-1/4 h-1/3 w-1/3 opacity-10"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px)
+              linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)
             `,
-            backgroundSize: "15px 15px",
+            backgroundSize: "35px 35px",
           }}
         ></div>
       </div>
@@ -726,7 +738,7 @@ export default async function LandingPage() {
 
             {/* Subtitle - Larger mobile text and centered */}
             <p className="mx-auto mb-10 max-w-2xl text-xl leading-relaxed font-light text-gray-300 sm:mx-0 sm:mb-12 sm:text-xl md:text-xl">
-              Analyze DNA variants with precision AI—so you can explore genomic
+              Analyze DNA variants with precision AI so you can explore genomic
               insights and get results right the first time.
             </p>
           </div>
